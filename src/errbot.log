@@ -1,0 +1,637 @@
+2019-08-18 11:44:53,618 INFO     errbot.bootstrap          Found Storage plugin: Shelf.
+2019-08-18 11:44:53,622 INFO     errbot.bootstrap          Found Backend plugin: Text
+2019-08-18 11:44:53,622 DEBUG    errbot.storage            Opening storage 'repomgr'
+2019-08-18 11:44:53,623 DEBUG    errbot.storage.shelf      Open shelf storage /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data/repomgr.db
+2019-08-18 11:44:53,652 DEBUG    errbot.core               ErrBot init.
+2019-08-18 11:44:53,653 DEBUG    errbot.backends.base      Backend init.
+2019-08-18 11:44:53,654 DEBUG    errbot.core               created a thread pool of size 10.
+2019-08-18 11:44:53,655 DEBUG    errbot.backends.text      Text Backend Init.
+2019-08-18 11:44:53,655 DEBUG    errbot.backends.text      Bot username set at @errbot.
+2019-08-18 11:44:53,663 DEBUG    MARKDOWN                  Successfuly imported extension module "markdown.extensions.smart_strong".
+2019-08-18 11:44:53,664 DEBUG    MARKDOWN                  Successfully loaded extension "markdown.extensions.smart_strong.SmartEmphasisExtension".
+2019-08-18 11:44:53,664 DEBUG    MARKDOWN                  Successfuly imported extension module "markdown.extensions.fenced_code".
+2019-08-18 11:44:53,664 DEBUG    MARKDOWN                  Successfully loaded extension "markdown.extensions.fenced_code.FencedCodeExtension".
+2019-08-18 11:44:53,665 DEBUG    MARKDOWN                  Successfuly imported extension module "markdown.extensions.footnotes".
+2019-08-18 11:44:53,665 DEBUG    MARKDOWN                  Successfully loaded extension "markdown.extensions.footnotes.FootnoteExtension".
+2019-08-18 11:44:53,668 DEBUG    MARKDOWN                  Successfuly imported extension module "markdown.extensions.attr_list".
+2019-08-18 11:44:53,668 DEBUG    MARKDOWN                  Successfully loaded extension "markdown.extensions.attr_list.AttrListExtension".
+2019-08-18 11:44:53,669 DEBUG    MARKDOWN                  Successfuly imported extension module "markdown.extensions.def_list".
+2019-08-18 11:44:53,669 DEBUG    MARKDOWN                  Successfully loaded extension "markdown.extensions.def_list.DefListExtension".
+2019-08-18 11:44:53,670 DEBUG    MARKDOWN                  Successfuly imported extension module "markdown.extensions.tables".
+2019-08-18 11:44:53,670 DEBUG    MARKDOWN                  Successfully loaded extension "markdown.extensions.tables.TableExtension".
+2019-08-18 11:44:53,671 DEBUG    MARKDOWN                  Successfuly imported extension module "markdown.extensions.abbr".
+2019-08-18 11:44:53,671 DEBUG    MARKDOWN                  Successfully loaded extension "markdown.extensions.abbr.AbbrExtension".
+2019-08-18 11:44:53,671 DEBUG    MARKDOWN                  Successfully loaded extension "markdown.extensions.extra.ExtraExtension".
+2019-08-18 11:44:53,672 DEBUG    MARKDOWN                  Successfully loaded extension "errbot.rendering.ansiext.AnsiExtension".
+2019-08-18 11:44:53,684 DEBUG    errbot.storage            Opening storage 'core'
+2019-08-18 11:44:53,684 DEBUG    errbot.storage.shelf      Open shelf storage /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data/core.db
+2019-08-18 11:44:53,685 DEBUG    errbot.core               Initializing backend storage
+2019-08-18 11:44:53,685 DEBUG    errbot.storage            Opening storage 'text_backend'
+2019-08-18 11:44:53,685 DEBUG    errbot.storage.shelf      Open shelf storage /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data/text_backend.db
+2019-08-18 11:44:53,690 DEBUG    errbot.plugin_manager     New entries added to sys.path:
+2019-08-18 11:44:53,690 DEBUG    errbot.plugin_manager     /Users/craigsimon/.pyenv/versions/3.6.9/envs/cogbot/lib/python3.6/site-packages/errbot/core_plugins
+2019-08-18 11:44:53,690 DEBUG    errbot.plugin_manager     /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/plugins/err-example
+2019-08-18 11:44:53,691 DEBUG    errbot.plugins.ACLs       Logger for plugin initialized...
+2019-08-18 11:44:53,693 DEBUG    errbot.plugins.Flows      Logger for plugin initialized...
+2019-08-18 11:44:53,694 DEBUG    errbot.plugins.CommandNotFoundFilter Logger for plugin initialized...
+2019-08-18 11:44:53,696 DEBUG    errbot.plugins.Health     Logger for plugin initialized...
+2019-08-18 11:44:53,697 DEBUG    errbot.plugins.Backup     Logger for plugin initialized...
+2019-08-18 11:44:53,838 INFO     errbot                    webhooks:  Flag to bind /echo to echo
+2019-08-18 11:44:53,838 DEBUG    errbot.plugins.Webserver  Logger for plugin initialized...
+2019-08-18 11:44:53,839 DEBUG    errbot.plugins.TextCmds   Logger for plugin initialized...
+2019-08-18 11:44:53,907 DEBUG    errbot.plugins.VersionChecker Logger for plugin initialized...
+2019-08-18 11:44:53,908 DEBUG    errbot.plugins.Plugins    Logger for plugin initialized...
+2019-08-18 11:44:53,909 DEBUG    errbot.plugins.Help       Logger for plugin initialized...
+2019-08-18 11:44:53,910 DEBUG    errbot.plugins.ChatRoom   Logger for plugin initialized...
+2019-08-18 11:44:53,910 DEBUG    errbot.plugins.Utils      Logger for plugin initialized...
+2019-08-18 11:44:53,912 DEBUG    errbot.plugins.Example    Logger for plugin initialized...
+2019-08-18 11:44:53,912 DEBUG    errbot.bootstrap          Start serving commands from the text backend.
+2019-08-18 11:44:53,918 INFO     errbot.core               Activate internal commands
+2019-08-18 11:44:53,918 INFO     errbot.plugin_manager     Activate bot plugins...
+2019-08-18 11:44:53,919 INFO     errbot.plugin_manager     Activate plugin: ACLs.
+2019-08-18 11:44:53,919 DEBUG    errbot.templating         Templates directory found for this plugin [/Users/craigsimon/.pyenv/versions/3.6.9/envs/cogbot/lib/python3.6/site-packages/errbot/core_plugins/templates]
+2019-08-18 11:44:53,920 DEBUG    errbot.botplugin          Init storage for ACLs.
+2019-08-18 11:44:53,920 DEBUG    errbot.storage            Opening storage 'ACLs'
+2019-08-18 11:44:53,920 DEBUG    errbot.storage.shelf      Open shelf storage /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data/ACLs.db
+2019-08-18 11:44:53,920 DEBUG    errbot.core               Adding command filter: acls
+2019-08-18 11:44:53,921 INFO     errbot.core_plugins.wsview Checking ACLS for webhooks
+2019-08-18 11:44:53,921 INFO     errbot.plugin_manager     Activate plugin: Flows.
+2019-08-18 11:44:53,921 DEBUG    errbot.templating         Templates directory found for this plugin [/Users/craigsimon/.pyenv/versions/3.6.9/envs/cogbot/lib/python3.6/site-packages/errbot/core_plugins/templates]
+2019-08-18 11:44:53,921 DEBUG    errbot.botplugin          Init storage for Flows.
+2019-08-18 11:44:53,921 DEBUG    errbot.storage            Opening storage 'Flows'
+2019-08-18 11:44:53,921 DEBUG    errbot.storage.shelf      Open shelf storage /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data/Flows.db
+2019-08-18 11:44:53,922 DEBUG    errbot.core               Adding command : flows_kill -> flows_kill.
+2019-08-18 11:44:53,922 DEBUG    errbot.core               Adding command : flows_list -> flows_list.
+2019-08-18 11:44:53,922 DEBUG    errbot.core               Adding command : flows_show -> flows_show.
+2019-08-18 11:44:53,922 DEBUG    errbot.core               Adding command : flows_start -> flows_start.
+2019-08-18 11:44:53,922 DEBUG    errbot.core               Adding command : flows_status -> flows_status.
+2019-08-18 11:44:53,922 DEBUG    errbot.core               Adding command : flows_stop -> flows_stop.
+2019-08-18 11:44:53,922 INFO     errbot.core_plugins.wsview Checking Flows for webhooks
+2019-08-18 11:44:53,922 INFO     errbot.plugin_manager     Activate plugin: CommandNotFoundFilter.
+2019-08-18 11:44:53,922 DEBUG    errbot.templating         Templates directory found for this plugin [/Users/craigsimon/.pyenv/versions/3.6.9/envs/cogbot/lib/python3.6/site-packages/errbot/core_plugins/templates]
+2019-08-18 11:44:53,922 DEBUG    errbot.botplugin          Init storage for CommandNotFoundFilter.
+2019-08-18 11:44:53,923 DEBUG    errbot.storage            Opening storage 'CommandNotFoundFilter'
+2019-08-18 11:44:53,923 DEBUG    errbot.storage.shelf      Open shelf storage /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data/CommandNotFoundFilter.db
+2019-08-18 11:44:53,923 DEBUG    errbot.core               Adding command filter: cnf_filter
+2019-08-18 11:44:53,923 INFO     errbot.core_plugins.wsview Checking CommandNotFoundFilter for webhooks
+2019-08-18 11:44:53,924 INFO     errbot.plugin_manager     Activate plugin: Health.
+2019-08-18 11:44:53,924 DEBUG    errbot.templating         Templates directory found for this plugin [/Users/craigsimon/.pyenv/versions/3.6.9/envs/cogbot/lib/python3.6/site-packages/errbot/core_plugins/templates]
+2019-08-18 11:44:53,924 DEBUG    errbot.botplugin          Init storage for Health.
+2019-08-18 11:44:53,924 DEBUG    errbot.storage            Opening storage 'Health'
+2019-08-18 11:44:53,924 DEBUG    errbot.storage.shelf      Open shelf storage /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data/Health.db
+2019-08-18 11:44:53,925 DEBUG    errbot.core               Adding command : restart -> restart.
+2019-08-18 11:44:53,925 DEBUG    errbot.core               Adding command : shutdown -> shutdown.
+2019-08-18 11:44:53,925 DEBUG    errbot.core               Adding command : status -> status.
+2019-08-18 11:44:53,925 DEBUG    errbot.core               Adding command : status_gc -> status_gc.
+2019-08-18 11:44:53,925 DEBUG    errbot.core               Adding command : status_load -> status_load.
+2019-08-18 11:44:53,925 DEBUG    errbot.core               Adding command : status_plugins -> status_plugins.
+2019-08-18 11:44:53,925 DEBUG    errbot.core               Adding command : uptime -> uptime.
+2019-08-18 11:44:53,925 INFO     errbot.core_plugins.wsview Checking Health for webhooks
+2019-08-18 11:44:53,925 INFO     errbot.plugin_manager     Activate plugin: Backup.
+2019-08-18 11:44:53,925 DEBUG    errbot.templating         Templates directory found for this plugin [/Users/craigsimon/.pyenv/versions/3.6.9/envs/cogbot/lib/python3.6/site-packages/errbot/core_plugins/templates]
+2019-08-18 11:44:53,926 DEBUG    errbot.botplugin          Init storage for Backup.
+2019-08-18 11:44:53,926 DEBUG    errbot.storage            Opening storage 'Backup'
+2019-08-18 11:44:53,926 DEBUG    errbot.storage.shelf      Open shelf storage /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data/Backup.db
+2019-08-18 11:44:53,926 DEBUG    errbot.core               Adding command : backup -> backup.
+2019-08-18 11:44:53,927 INFO     errbot.core_plugins.wsview Checking Backup for webhooks
+2019-08-18 11:44:53,927 INFO     errbot.plugin_manager     Activate plugin: Webserver.
+2019-08-18 11:44:53,927 DEBUG    errbot.templating         Templates directory found for this plugin [/Users/craigsimon/.pyenv/versions/3.6.9/envs/cogbot/lib/python3.6/site-packages/errbot/core_plugins/templates]
+2019-08-18 11:44:53,927 INFO     errbot.plugins.Webserver  Webserver is not configured. Forbid activation
+2019-08-18 11:44:53,927 INFO     errbot.core_plugins.wsview Checking Webserver for webhooks
+2019-08-18 11:44:53,927 INFO     errbot.core_plugins.wsview Webhook routing echo
+2019-08-18 11:44:53,928 INFO     errbot.plugin_manager     Activate plugin: TextCmds.
+2019-08-18 11:44:53,928 DEBUG    errbot.templating         Templates directory found for this plugin [/Users/craigsimon/.pyenv/versions/3.6.9/envs/cogbot/lib/python3.6/site-packages/errbot/core_plugins/templates]
+2019-08-18 11:44:53,928 DEBUG    errbot.botplugin          Init storage for TextCmds.
+2019-08-18 11:44:53,928 DEBUG    errbot.storage            Opening storage 'TextCmds'
+2019-08-18 11:44:53,928 DEBUG    errbot.storage.shelf      Open shelf storage /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data/TextCmds.db
+2019-08-18 11:44:53,929 DEBUG    errbot.core               Adding command : asadmin -> asadmin.
+2019-08-18 11:44:53,929 DEBUG    errbot.core               Adding command : asuser -> asuser.
+2019-08-18 11:44:53,929 DEBUG    errbot.core               Adding command : inperson -> inperson.
+2019-08-18 11:44:53,929 DEBUG    errbot.core               Adding command : inroom -> inroom.
+2019-08-18 11:44:53,929 DEBUG    errbot.core               Adding command : ml -> ml.
+2019-08-18 11:44:53,929 INFO     errbot.core_plugins.wsview Checking TextModeCmds for webhooks
+2019-08-18 11:44:53,929 INFO     errbot.plugin_manager     Activate plugin: VersionChecker.
+2019-08-18 11:44:53,930 DEBUG    errbot.templating         Templates directory found for this plugin [/Users/craigsimon/.pyenv/versions/3.6.9/envs/cogbot/lib/python3.6/site-packages/errbot/core_plugins/templates]
+2019-08-18 11:44:53,930 INFO     errbot.plugins.VersionChecker Skip version checking under text mode.
+2019-08-18 11:44:53,930 INFO     errbot.core_plugins.wsview Checking VersionChecker for webhooks
+2019-08-18 11:44:53,930 INFO     errbot.plugin_manager     Activate plugin: Plugins.
+2019-08-18 11:44:53,930 DEBUG    errbot.templating         Templates directory found for this plugin [/Users/craigsimon/.pyenv/versions/3.6.9/envs/cogbot/lib/python3.6/site-packages/errbot/core_plugins/templates]
+2019-08-18 11:44:53,930 DEBUG    errbot.botplugin          Init storage for Plugins.
+2019-08-18 11:44:53,930 DEBUG    errbot.storage            Opening storage 'Plugins'
+2019-08-18 11:44:53,930 DEBUG    errbot.storage.shelf      Open shelf storage /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data/Plugins.db
+2019-08-18 11:44:53,931 DEBUG    errbot.core               Adding command : plugin_activate -> plugin_activate.
+2019-08-18 11:44:53,931 DEBUG    errbot.core               Adding command : plugin_blacklist -> plugin_blacklist.
+2019-08-18 11:44:53,931 DEBUG    errbot.core               Adding command : plugin_config -> plugin_config.
+2019-08-18 11:44:53,931 DEBUG    errbot.core               Adding command : plugin_deactivate -> plugin_deactivate.
+2019-08-18 11:44:53,931 DEBUG    errbot.core               Adding command : plugin_info -> plugin_info.
+2019-08-18 11:44:53,931 DEBUG    errbot.core               Adding command : plugin_reload -> plugin_reload.
+2019-08-18 11:44:53,931 DEBUG    errbot.core               Adding command : plugin_unblacklist -> plugin_unblacklist.
+2019-08-18 11:44:53,931 DEBUG    errbot.core               Adding command : repos -> repos.
+2019-08-18 11:44:53,931 DEBUG    errbot.core               Adding command : repos_install -> repos_install.
+2019-08-18 11:44:53,931 DEBUG    errbot.core               Adding command : repos_search -> repos_search.
+2019-08-18 11:44:53,931 DEBUG    errbot.core               Adding command : repos_uninstall -> repos_uninstall.
+2019-08-18 11:44:53,931 DEBUG    errbot.core               Adding command : repos_update -> repos_update.
+2019-08-18 11:44:53,931 INFO     errbot.core_plugins.wsview Checking Plugins for webhooks
+2019-08-18 11:44:53,932 INFO     errbot.plugin_manager     Activate plugin: Help.
+2019-08-18 11:44:53,932 DEBUG    errbot.templating         Templates directory found for this plugin [/Users/craigsimon/.pyenv/versions/3.6.9/envs/cogbot/lib/python3.6/site-packages/errbot/core_plugins/templates]
+2019-08-18 11:44:53,932 DEBUG    errbot.botplugin          Init storage for Help.
+2019-08-18 11:44:53,932 DEBUG    errbot.storage            Opening storage 'Help'
+2019-08-18 11:44:53,932 DEBUG    errbot.storage.shelf      Open shelf storage /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data/Help.db
+2019-08-18 11:44:53,932 DEBUG    errbot.core               Adding command : about -> about.
+2019-08-18 11:44:53,932 DEBUG    errbot.core               Adding command : apropos -> apropos.
+2019-08-18 11:44:53,933 DEBUG    errbot.core               Adding command : help -> help.
+2019-08-18 11:44:53,933 INFO     errbot.core_plugins.wsview Checking Help for webhooks
+2019-08-18 11:44:53,933 INFO     errbot.plugin_manager     Activate plugin: ChatRoom.
+2019-08-18 11:44:53,933 DEBUG    errbot.templating         Templates directory found for this plugin [/Users/craigsimon/.pyenv/versions/3.6.9/envs/cogbot/lib/python3.6/site-packages/errbot/core_plugins/templates]
+2019-08-18 11:44:53,933 DEBUG    errbot.botplugin          Init storage for ChatRoom.
+2019-08-18 11:44:53,933 DEBUG    errbot.storage            Opening storage 'ChatRoom'
+2019-08-18 11:44:53,933 DEBUG    errbot.storage.shelf      Open shelf storage /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data/ChatRoom.db
+2019-08-18 11:44:53,934 DEBUG    errbot.core               Adding command : room_create -> room_create.
+2019-08-18 11:44:53,934 DEBUG    errbot.core               Adding command : room_destroy -> room_destroy.
+2019-08-18 11:44:53,934 DEBUG    errbot.core               Adding command : room_invite -> room_invite.
+2019-08-18 11:44:53,934 DEBUG    errbot.core               Adding command : room_join -> room_join.
+2019-08-18 11:44:53,934 DEBUG    errbot.core               Adding command : room_leave -> room_leave.
+2019-08-18 11:44:53,934 DEBUG    errbot.core               Adding command : room_list -> room_list.
+2019-08-18 11:44:53,934 DEBUG    errbot.core               Adding command : room_occupants -> room_occupants.
+2019-08-18 11:44:53,934 DEBUG    errbot.core               Adding command : room_topic -> room_topic.
+2019-08-18 11:44:53,935 INFO     errbot.core_plugins.wsview Checking ChatRoom for webhooks
+2019-08-18 11:44:53,935 INFO     errbot.plugins.ChatRoom   Callback_connect
+2019-08-18 11:44:53,935 INFO     errbot.plugin_manager     Activate plugin: Utils.
+2019-08-18 11:44:53,935 DEBUG    errbot.templating         Templates directory found for this plugin [/Users/craigsimon/.pyenv/versions/3.6.9/envs/cogbot/lib/python3.6/site-packages/errbot/core_plugins/templates]
+2019-08-18 11:44:53,935 DEBUG    errbot.botplugin          Init storage for Utils.
+2019-08-18 11:44:53,938 DEBUG    errbot.storage            Opening storage 'Utils'
+2019-08-18 11:44:53,938 DEBUG    errbot.storage.shelf      Open shelf storage /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data/Utils.db
+2019-08-18 11:44:53,939 DEBUG    errbot.core               Adding command : echo -> echo.
+2019-08-18 11:44:53,939 DEBUG    errbot.core               Adding command : history -> history.
+2019-08-18 11:44:53,939 DEBUG    errbot.core               Adding command : log_tail -> log_tail.
+2019-08-18 11:44:53,939 DEBUG    errbot.core               Adding command : render_test -> render_test.
+2019-08-18 11:44:53,939 DEBUG    errbot.core               Adding command : whoami -> whoami.
+2019-08-18 11:44:53,939 INFO     errbot.core_plugins.wsview Checking Utils for webhooks
+2019-08-18 11:44:53,939 INFO     errbot.plugin_manager     Activate plugin: Example.
+2019-08-18 11:44:53,939 DEBUG    errbot.templating         No templates directory found for this plugin [Looking for /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/plugins/err-example/templates]
+2019-08-18 11:44:53,940 DEBUG    errbot.botplugin          Init storage for Example.
+2019-08-18 11:44:53,940 DEBUG    errbot.storage            Opening storage 'Example'
+2019-08-18 11:44:53,940 DEBUG    errbot.storage.shelf      Open shelf storage /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data/Example.db
+2019-08-18 11:44:53,940 DEBUG    errbot.core               Adding command : tryme -> tryme.
+2019-08-18 11:44:53,940 INFO     errbot.core_plugins.wsview Checking Example for webhooks
+2019-08-18 11:44:53,941 DEBUG    errbot.plugin_manager     Activate flow plugins ...
+2019-08-18 11:44:53,941 INFO     errbot.core               
+2019-08-18 11:44:53,941 INFO     errbot.core               Notifying connection to all the plugins...
+2019-08-18 11:44:53,941 DEBUG    errbot.core               Trigger callback_connect on ACLS.
+2019-08-18 11:44:53,941 DEBUG    errbot.core               Trigger callback_connect on Flows.
+2019-08-18 11:44:53,941 DEBUG    errbot.core               Trigger callback_connect on CommandNotFoundFilter.
+2019-08-18 11:44:53,941 DEBUG    errbot.core               Trigger callback_connect on Health.
+2019-08-18 11:44:53,941 DEBUG    errbot.core               Trigger callback_connect on Backup.
+2019-08-18 11:44:53,941 DEBUG    errbot.core               Trigger callback_connect on TextModeCmds.
+2019-08-18 11:44:53,941 DEBUG    errbot.core               Trigger callback_connect on Plugins.
+2019-08-18 11:44:53,941 DEBUG    errbot.core               Trigger callback_connect on Help.
+2019-08-18 11:44:53,941 DEBUG    errbot.core               Trigger callback_connect on ChatRoom.
+2019-08-18 11:44:53,941 INFO     errbot.plugins.ChatRoom   Callback_connect
+2019-08-18 11:44:53,941 DEBUG    errbot.core               Trigger callback_connect on Utils.
+2019-08-18 11:44:53,941 DEBUG    errbot.core               Trigger callback_connect on Example.
+2019-08-18 11:44:53,941 INFO     errbot.core               Plugin activation done.
+2019-08-18 11:44:53,941 DEBUG    errbot.core               Triggering callback_presence on ACLs.
+2019-08-18 11:44:53,941 DEBUG    errbot.core               Triggering callback_presence on Flows.
+2019-08-18 11:44:53,941 DEBUG    errbot.core               Triggering callback_presence on CommandNotFoundFilter.
+2019-08-18 11:44:53,941 DEBUG    errbot.core               Triggering callback_presence on Health.
+2019-08-18 11:44:53,941 DEBUG    errbot.core               Triggering callback_presence on Backup.
+2019-08-18 11:44:53,942 DEBUG    errbot.core               Triggering callback_presence on TextCmds.
+2019-08-18 11:44:53,942 DEBUG    errbot.core               Triggering callback_presence on Plugins.
+2019-08-18 11:44:53,942 DEBUG    errbot.core               Triggering callback_presence on Help.
+2019-08-18 11:44:53,942 DEBUG    errbot.core               Triggering callback_presence on ChatRoom.
+2019-08-18 11:44:53,942 DEBUG    errbot.core               Triggering callback_presence on Utils.
+2019-08-18 11:44:53,942 DEBUG    errbot.core               Triggering callback_presence on Example.
+2019-08-18 11:45:23,989 DEBUG    errbot.core               Triggering callback_presence on ACLs.
+2019-08-18 11:45:23,989 DEBUG    errbot.core               Triggering callback_presence on Flows.
+2019-08-18 11:45:23,989 DEBUG    errbot.core               Triggering callback_presence on CommandNotFoundFilter.
+2019-08-18 11:45:23,989 DEBUG    errbot.core               Triggering callback_presence on Health.
+2019-08-18 11:45:23,989 DEBUG    errbot.core               Triggering callback_presence on Backup.
+2019-08-18 11:45:23,989 DEBUG    errbot.core               Triggering callback_presence on TextCmds.
+2019-08-18 11:45:23,989 DEBUG    errbot.core               Triggering callback_presence on Plugins.
+2019-08-18 11:45:23,989 DEBUG    errbot.core               Triggering callback_presence on Help.
+2019-08-18 11:45:23,990 DEBUG    errbot.core               Triggering callback_presence on ChatRoom.
+2019-08-18 11:45:23,990 DEBUG    errbot.core               Triggering callback_presence on Utils.
+2019-08-18 11:45:23,990 DEBUG    errbot.core               Triggering callback_presence on Example.
+2019-08-18 11:45:23,990 DEBUG    errbot.backends.text      Trigger disconnect callback
+2019-08-18 11:45:23,990 INFO     errbot.core               Disconnect callback, deactivating all the plugins.
+2019-08-18 11:45:23,990 DEBUG    errbot.storage            Closed storage 'ACLs'
+2019-08-18 11:45:23,990 DEBUG    errbot.core               Removing command filter: acls
+2019-08-18 11:45:23,991 DEBUG    errbot.storage            Closed storage 'Flows'
+2019-08-18 11:45:23,991 DEBUG    errbot.storage            Closed storage 'CommandNotFoundFilter'
+2019-08-18 11:45:23,992 DEBUG    errbot.core               Removing command filter: cnf_filter
+2019-08-18 11:45:23,992 DEBUG    errbot.storage            Closed storage 'Health'
+2019-08-18 11:45:23,993 DEBUG    errbot.storage            Closed storage 'Backup'
+2019-08-18 11:45:23,994 DEBUG    errbot.storage            Closed storage 'TextCmds'
+2019-08-18 11:45:23,994 DEBUG    errbot.storage            Closed storage 'Plugins'
+2019-08-18 11:45:23,995 DEBUG    errbot.storage            Closed storage 'Help'
+2019-08-18 11:45:23,996 DEBUG    errbot.storage            Closed storage 'ChatRoom'
+2019-08-18 11:45:23,996 DEBUG    errbot.storage            Closed storage 'Utils'
+2019-08-18 11:45:23,997 DEBUG    errbot.storage            Closed storage 'Example'
+2019-08-18 11:45:23,997 DEBUG    errbot.backends.text      Trigger shutdown
+2019-08-18 11:45:23,997 DEBUG    errbot.storage            Closed storage 'text_backend'
+2019-08-18 11:45:23,997 INFO     errbot.plugin_manager     Shutdown.
+2019-08-18 11:45:23,997 DEBUG    errbot.storage            Closed storage 'core'
+2019-08-18 11:45:23,997 INFO     errbot.plugin_manager     Bye.
+2019-08-18 11:45:23,998 DEBUG    errbot.storage            Closed storage 'repomgr'
+2019-08-18 11:45:23,998 INFO     errbot.cli                Process exiting
+2019-08-18 11:58:40,068 INFO     errbot.bootstrap          Found Storage plugin: Shelf.
+2019-08-18 11:58:40,073 INFO     errbot.bootstrap          Found Backend plugin: Slack
+2019-08-18 11:58:40,073 DEBUG    errbot.storage            Opening storage 'repomgr'
+2019-08-18 11:58:40,073 DEBUG    errbot.storage.shelf      Open shelf storage /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data/repomgr.db
+2019-08-18 11:58:40,101 ERROR    errbot.backends.slack     Could not start the Slack back-end
+Traceback (most recent call last):
+  File "/Users/craigsimon/.pyenv/versions/3.6.9/envs/cogbot/lib/python3.6/site-packages/errbot/backends/slack.py", line 25, in <module>
+    from slackclient import SlackClient
+ModuleNotFoundError: No module named 'slackclient'
+2019-08-18 11:58:40,102 CRITICAL errbot.backends.slack     You need to install the slackclient support in order to use the Slack backend.
+You can do `pip install errbot[slack]` to install it
+2019-08-18 11:59:28,966 INFO     errbot.bootstrap          Found Storage plugin: Shelf.
+2019-08-18 11:59:28,970 INFO     errbot.bootstrap          Found Backend plugin: Slack
+2019-08-18 11:59:28,970 DEBUG    errbot.storage            Opening storage 'repomgr'
+2019-08-18 11:59:28,971 DEBUG    errbot.storage.shelf      Open shelf storage /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data/repomgr.db
+2019-08-18 11:59:28,994 ERROR    errbot.backends.slack     Could not start the Slack back-end
+Traceback (most recent call last):
+  File "/Users/craigsimon/.pyenv/versions/3.6.9/envs/cogbot/lib/python3.6/site-packages/errbot/backends/slack.py", line 25, in <module>
+    from slackclient import SlackClient
+ModuleNotFoundError: No module named 'slackclient'
+2019-08-18 11:59:28,994 CRITICAL errbot.backends.slack     You need to install the slackclient support in order to use the Slack backend.
+You can do `pip install errbot[slack]` to install it
+2019-08-18 12:00:26,596 INFO     errbot.bootstrap          Found Storage plugin: Shelf.
+2019-08-18 12:00:26,600 INFO     errbot.bootstrap          Found Backend plugin: Slack
+2019-08-18 12:00:26,600 DEBUG    errbot.storage            Opening storage 'repomgr'
+2019-08-18 12:00:26,601 DEBUG    errbot.storage.shelf      Open shelf storage /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data/repomgr.db
+2019-08-18 12:00:26,623 ERROR    errbot.backends.slack     Could not start the Slack back-end
+Traceback (most recent call last):
+  File "/Users/craigsimon/.pyenv/versions/3.6.9/envs/cogbot/lib/python3.6/site-packages/errbot/backends/slack.py", line 25, in <module>
+    from slackclient import SlackClient
+ModuleNotFoundError: No module named 'slackclient'
+2019-08-18 12:00:26,623 CRITICAL errbot.backends.slack     You need to install the slackclient support in order to use the Slack backend.
+You can do `pip install errbot[slack]` to install it
+2019-08-18 12:01:01,071 INFO     errbot.bootstrap          Found Storage plugin: Shelf.
+2019-08-18 12:01:01,075 INFO     errbot.bootstrap          Found Backend plugin: Slack
+2019-08-18 12:01:01,075 DEBUG    errbot.storage            Opening storage 'repomgr'
+2019-08-18 12:01:01,076 DEBUG    errbot.storage.shelf      Open shelf storage /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data/repomgr.db
+2019-08-18 12:01:01,229 DEBUG    errbot.core               ErrBot init.
+2019-08-18 12:01:01,230 DEBUG    errbot.backends.base      Backend init.
+2019-08-18 12:01:01,231 DEBUG    errbot.core               created a thread pool of size 10.
+2019-08-18 12:01:01,242 DEBUG    MARKDOWN                  Successfuly imported extension module "markdown.extensions.smart_strong".
+2019-08-18 12:01:01,243 DEBUG    MARKDOWN                  Successfully loaded extension "markdown.extensions.smart_strong.SmartEmphasisExtension".
+2019-08-18 12:01:01,243 DEBUG    MARKDOWN                  Successfuly imported extension module "markdown.extensions.fenced_code".
+2019-08-18 12:01:01,243 DEBUG    MARKDOWN                  Successfully loaded extension "markdown.extensions.fenced_code.FencedCodeExtension".
+2019-08-18 12:01:01,244 DEBUG    MARKDOWN                  Successfuly imported extension module "markdown.extensions.footnotes".
+2019-08-18 12:01:01,244 DEBUG    MARKDOWN                  Successfully loaded extension "markdown.extensions.footnotes.FootnoteExtension".
+2019-08-18 12:01:01,247 DEBUG    MARKDOWN                  Successfuly imported extension module "markdown.extensions.attr_list".
+2019-08-18 12:01:01,247 DEBUG    MARKDOWN                  Successfully loaded extension "markdown.extensions.attr_list.AttrListExtension".
+2019-08-18 12:01:01,248 DEBUG    MARKDOWN                  Successfuly imported extension module "markdown.extensions.def_list".
+2019-08-18 12:01:01,249 DEBUG    MARKDOWN                  Successfully loaded extension "markdown.extensions.def_list.DefListExtension".
+2019-08-18 12:01:01,250 DEBUG    MARKDOWN                  Successfuly imported extension module "markdown.extensions.tables".
+2019-08-18 12:01:01,250 DEBUG    MARKDOWN                  Successfully loaded extension "markdown.extensions.tables.TableExtension".
+2019-08-18 12:01:01,251 DEBUG    MARKDOWN                  Successfuly imported extension module "markdown.extensions.abbr".
+2019-08-18 12:01:01,257 DEBUG    MARKDOWN                  Successfully loaded extension "markdown.extensions.abbr.AbbrExtension".
+2019-08-18 12:01:01,257 DEBUG    MARKDOWN                  Successfully loaded extension "markdown.extensions.extra.ExtraExtension".
+2019-08-18 12:01:01,258 DEBUG    MARKDOWN                  Successfully loaded extension "errbot.rendering.ansiext.AnsiExtension".
+2019-08-18 12:01:01,258 DEBUG    errbot.storage            Opening storage 'core'
+2019-08-18 12:01:01,258 DEBUG    errbot.storage.shelf      Open shelf storage /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data/core.db
+2019-08-18 12:01:01,260 DEBUG    errbot.core               Initializing backend storage
+2019-08-18 12:01:01,260 DEBUG    errbot.storage            Opening storage 'slack_backend'
+2019-08-18 12:01:01,260 DEBUG    errbot.storage.shelf      Open shelf storage /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data/slack_backend.db
+2019-08-18 12:01:01,263 DEBUG    errbot.plugin_manager     New entries added to sys.path:
+2019-08-18 12:01:01,264 DEBUG    errbot.plugin_manager     /Users/craigsimon/.pyenv/versions/3.6.9/envs/cogbot/lib/python3.6/site-packages/errbot/core_plugins
+2019-08-18 12:01:01,264 DEBUG    errbot.plugin_manager     /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/plugins/err-example
+2019-08-18 12:01:01,265 DEBUG    errbot.plugins.ACLs       Logger for plugin initialized...
+2019-08-18 12:01:01,267 DEBUG    errbot.plugins.Flows      Logger for plugin initialized...
+2019-08-18 12:01:01,268 DEBUG    errbot.plugins.CommandNotFoundFilter Logger for plugin initialized...
+2019-08-18 12:01:01,270 DEBUG    errbot.plugins.Health     Logger for plugin initialized...
+2019-08-18 12:01:01,271 DEBUG    errbot.plugins.Backup     Logger for plugin initialized...
+2019-08-18 12:01:01,369 INFO     errbot                    webhooks:  Flag to bind /echo to echo
+2019-08-18 12:01:01,369 DEBUG    errbot.plugins.Webserver  Logger for plugin initialized...
+2019-08-18 12:01:01,370 DEBUG    errbot.plugins.TextCmds   Logger for plugin initialized...
+2019-08-18 12:01:01,371 DEBUG    errbot.plugins.VersionChecker Logger for plugin initialized...
+2019-08-18 12:01:01,372 DEBUG    errbot.plugins.Plugins    Logger for plugin initialized...
+2019-08-18 12:01:01,372 DEBUG    errbot.plugins.Help       Logger for plugin initialized...
+2019-08-18 12:01:01,373 DEBUG    errbot.plugins.ChatRoom   Logger for plugin initialized...
+2019-08-18 12:01:01,374 DEBUG    errbot.plugins.Utils      Logger for plugin initialized...
+2019-08-18 12:01:01,375 DEBUG    errbot.plugins.Example    Logger for plugin initialized...
+2019-08-18 12:01:01,376 DEBUG    errbot.bootstrap          Start serving commands from the slack backend.
+2019-08-18 12:01:01,376 INFO     errbot.backends.slack     Verifying authentication token
+2019-08-18 12:01:01,380 DEBUG    urllib3.connectionpool    Starting new HTTPS connection (1): slack.com:443
+2019-08-18 12:01:01,628 DEBUG    urllib3.connectionpool    https://slack.com:443 "POST /api/auth.test HTTP/1.1" 200 134
+2019-08-18 12:01:01,631 DEBUG    errbot.backends.slack     Token accepted
+2019-08-18 12:01:01,631 INFO     errbot.backends.slack     Connecting to Slack real-time-messaging API
+2019-08-18 12:01:01,633 DEBUG    urllib3.connectionpool    Starting new HTTPS connection (1): slack.com:443
+2019-08-18 12:01:01,920 DEBUG    urllib3.connectionpool    https://slack.com:443 "POST /api/rtm.start HTTP/1.1" 200 5951
+2019-08-18 12:01:02,122 DEBUG    root                      RTM connected
+2019-08-18 12:01:02,122 INFO     errbot.backends.slack     Connected
+2019-08-18 12:01:02,123 DEBUG    errbot.backends.slack     Converted bot_alt_prefixes: ()
+2019-08-18 12:01:02,289 DEBUG    errbot.backends.slack     Processing slack event: {'type': 'hello'}
+2019-08-18 12:01:02,289 INFO     errbot.core               Activate internal commands
+2019-08-18 12:01:02,290 INFO     errbot.plugin_manager     Activate bot plugins...
+2019-08-18 12:01:02,290 INFO     errbot.plugin_manager     Activate plugin: ACLs.
+2019-08-18 12:01:02,290 DEBUG    errbot.templating         Templates directory found for this plugin [/Users/craigsimon/.pyenv/versions/3.6.9/envs/cogbot/lib/python3.6/site-packages/errbot/core_plugins/templates]
+2019-08-18 12:01:02,291 DEBUG    errbot.botplugin          Init storage for ACLs.
+2019-08-18 12:01:02,292 DEBUG    errbot.storage            Opening storage 'ACLs'
+2019-08-18 12:01:02,292 DEBUG    errbot.storage.shelf      Open shelf storage /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data/ACLs.db
+2019-08-18 12:01:02,293 DEBUG    errbot.core               Adding command filter: acls
+2019-08-18 12:01:02,293 INFO     errbot.core_plugins.wsview Checking ACLS for webhooks
+2019-08-18 12:01:02,293 INFO     errbot.plugin_manager     Activate plugin: Flows.
+2019-08-18 12:01:02,293 DEBUG    errbot.templating         Templates directory found for this plugin [/Users/craigsimon/.pyenv/versions/3.6.9/envs/cogbot/lib/python3.6/site-packages/errbot/core_plugins/templates]
+2019-08-18 12:01:02,294 DEBUG    errbot.botplugin          Init storage for Flows.
+2019-08-18 12:01:02,294 DEBUG    errbot.storage            Opening storage 'Flows'
+2019-08-18 12:01:02,294 DEBUG    errbot.storage.shelf      Open shelf storage /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data/Flows.db
+2019-08-18 12:01:02,294 DEBUG    errbot.core               Adding command : flows_kill -> flows_kill.
+2019-08-18 12:01:02,315 DEBUG    errbot.core               Adding command : flows_list -> flows_list.
+2019-08-18 12:01:02,315 DEBUG    errbot.core               Adding command : flows_show -> flows_show.
+2019-08-18 12:01:02,316 DEBUG    errbot.core               Adding command : flows_start -> flows_start.
+2019-08-18 12:01:02,316 DEBUG    errbot.core               Adding command : flows_status -> flows_status.
+2019-08-18 12:01:02,316 DEBUG    errbot.core               Adding command : flows_stop -> flows_stop.
+2019-08-18 12:01:02,316 INFO     errbot.core_plugins.wsview Checking Flows for webhooks
+2019-08-18 12:01:02,316 INFO     errbot.plugin_manager     Activate plugin: CommandNotFoundFilter.
+2019-08-18 12:01:02,317 DEBUG    errbot.templating         Templates directory found for this plugin [/Users/craigsimon/.pyenv/versions/3.6.9/envs/cogbot/lib/python3.6/site-packages/errbot/core_plugins/templates]
+2019-08-18 12:01:02,317 DEBUG    errbot.botplugin          Init storage for CommandNotFoundFilter.
+2019-08-18 12:01:02,317 DEBUG    errbot.storage            Opening storage 'CommandNotFoundFilter'
+2019-08-18 12:01:02,317 DEBUG    errbot.storage.shelf      Open shelf storage /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data/CommandNotFoundFilter.db
+2019-08-18 12:01:02,318 DEBUG    errbot.core               Adding command filter: cnf_filter
+2019-08-18 12:01:02,318 INFO     errbot.core_plugins.wsview Checking CommandNotFoundFilter for webhooks
+2019-08-18 12:01:02,318 INFO     errbot.plugin_manager     Activate plugin: Health.
+2019-08-18 12:01:02,319 DEBUG    errbot.templating         Templates directory found for this plugin [/Users/craigsimon/.pyenv/versions/3.6.9/envs/cogbot/lib/python3.6/site-packages/errbot/core_plugins/templates]
+2019-08-18 12:01:02,319 DEBUG    errbot.botplugin          Init storage for Health.
+2019-08-18 12:01:02,319 DEBUG    errbot.storage            Opening storage 'Health'
+2019-08-18 12:01:02,319 DEBUG    errbot.storage.shelf      Open shelf storage /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data/Health.db
+2019-08-18 12:01:02,320 DEBUG    errbot.core               Adding command : restart -> restart.
+2019-08-18 12:01:02,320 DEBUG    errbot.core               Adding command : shutdown -> shutdown.
+2019-08-18 12:01:02,333 DEBUG    errbot.core               Adding command : status -> status.
+2019-08-18 12:01:02,333 DEBUG    errbot.core               Adding command : status_gc -> status_gc.
+2019-08-18 12:01:02,334 DEBUG    errbot.core               Adding command : status_load -> status_load.
+2019-08-18 12:01:02,334 DEBUG    errbot.core               Adding command : status_plugins -> status_plugins.
+2019-08-18 12:01:02,334 DEBUG    errbot.core               Adding command : uptime -> uptime.
+2019-08-18 12:01:02,334 INFO     errbot.core_plugins.wsview Checking Health for webhooks
+2019-08-18 12:01:02,334 INFO     errbot.plugin_manager     Activate plugin: Backup.
+2019-08-18 12:01:02,335 DEBUG    errbot.templating         Templates directory found for this plugin [/Users/craigsimon/.pyenv/versions/3.6.9/envs/cogbot/lib/python3.6/site-packages/errbot/core_plugins/templates]
+2019-08-18 12:01:02,335 DEBUG    errbot.botplugin          Init storage for Backup.
+2019-08-18 12:01:02,335 DEBUG    errbot.storage            Opening storage 'Backup'
+2019-08-18 12:01:02,335 DEBUG    errbot.storage.shelf      Open shelf storage /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data/Backup.db
+2019-08-18 12:01:02,335 DEBUG    errbot.core               Adding command : backup -> backup.
+2019-08-18 12:01:02,336 INFO     errbot.core_plugins.wsview Checking Backup for webhooks
+2019-08-18 12:01:02,336 INFO     errbot.plugin_manager     Activate plugin: Webserver.
+2019-08-18 12:01:02,336 DEBUG    errbot.templating         Templates directory found for this plugin [/Users/craigsimon/.pyenv/versions/3.6.9/envs/cogbot/lib/python3.6/site-packages/errbot/core_plugins/templates]
+2019-08-18 12:01:02,336 INFO     errbot.plugins.Webserver  Webserver is not configured. Forbid activation
+2019-08-18 12:01:02,336 INFO     errbot.core_plugins.wsview Checking Webserver for webhooks
+2019-08-18 12:01:02,336 INFO     errbot.core_plugins.wsview Webhook routing echo
+2019-08-18 12:01:02,337 INFO     errbot.plugin_manager     Activate plugin: TextCmds.
+2019-08-18 12:01:02,337 DEBUG    errbot.templating         Templates directory found for this plugin [/Users/craigsimon/.pyenv/versions/3.6.9/envs/cogbot/lib/python3.6/site-packages/errbot/core_plugins/templates]
+2019-08-18 12:01:02,338 INFO     errbot.core_plugins.wsview Checking TextModeCmds for webhooks
+2019-08-18 12:01:02,338 INFO     errbot.plugin_manager     Activate plugin: VersionChecker.
+2019-08-18 12:01:02,338 DEBUG    errbot.templating         Templates directory found for this plugin [/Users/craigsimon/.pyenv/versions/3.6.9/envs/cogbot/lib/python3.6/site-packages/errbot/core_plugins/templates]
+2019-08-18 12:01:02,338 DEBUG    errbot.plugins.VersionChecker Checking version in background.
+2019-08-18 12:01:02,339 DEBUG    errbot.botplugin          Programming the polling of version_check every 86400 seconds with args [] and kwargs {}
+2019-08-18 12:01:02,340 DEBUG    urllib3.connectionpool    Starting new HTTP connection (1): version.errbot.io:80
+2019-08-18 12:01:02,341 DEBUG    errbot.botplugin          Init storage for VersionChecker.
+2019-08-18 12:01:02,341 DEBUG    errbot.storage            Opening storage 'VersionChecker'
+2019-08-18 12:01:02,341 DEBUG    errbot.storage.shelf      Open shelf storage /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data/VersionChecker.db
+2019-08-18 12:01:02,342 INFO     errbot.core_plugins.wsview Checking VersionChecker for webhooks
+2019-08-18 12:01:02,343 INFO     errbot.plugin_manager     Activate plugin: Plugins.
+2019-08-18 12:01:02,343 DEBUG    errbot.templating         Templates directory found for this plugin [/Users/craigsimon/.pyenv/versions/3.6.9/envs/cogbot/lib/python3.6/site-packages/errbot/core_plugins/templates]
+2019-08-18 12:01:02,343 DEBUG    errbot.botplugin          Init storage for Plugins.
+2019-08-18 12:01:02,343 DEBUG    errbot.storage            Opening storage 'Plugins'
+2019-08-18 12:01:02,343 DEBUG    errbot.storage.shelf      Open shelf storage /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data/Plugins.db
+2019-08-18 12:01:02,344 DEBUG    errbot.core               Adding command : plugin_activate -> plugin_activate.
+2019-08-18 12:01:02,344 DEBUG    errbot.core               Adding command : plugin_blacklist -> plugin_blacklist.
+2019-08-18 12:01:02,344 DEBUG    errbot.core               Adding command : plugin_config -> plugin_config.
+2019-08-18 12:01:02,344 DEBUG    errbot.core               Adding command : plugin_deactivate -> plugin_deactivate.
+2019-08-18 12:01:02,344 DEBUG    errbot.core               Adding command : plugin_info -> plugin_info.
+2019-08-18 12:01:02,344 DEBUG    errbot.core               Adding command : plugin_reload -> plugin_reload.
+2019-08-18 12:01:02,344 DEBUG    errbot.core               Adding command : plugin_unblacklist -> plugin_unblacklist.
+2019-08-18 12:01:02,344 DEBUG    errbot.core               Adding command : repos -> repos.
+2019-08-18 12:01:02,344 DEBUG    errbot.core               Adding command : repos_install -> repos_install.
+2019-08-18 12:01:02,344 DEBUG    errbot.core               Adding command : repos_search -> repos_search.
+2019-08-18 12:01:02,344 DEBUG    errbot.core               Adding command : repos_uninstall -> repos_uninstall.
+2019-08-18 12:01:02,345 DEBUG    errbot.core               Adding command : repos_update -> repos_update.
+2019-08-18 12:01:02,345 INFO     errbot.core_plugins.wsview Checking Plugins for webhooks
+2019-08-18 12:01:02,345 INFO     errbot.plugin_manager     Activate plugin: Help.
+2019-08-18 12:01:02,345 DEBUG    errbot.templating         Templates directory found for this plugin [/Users/craigsimon/.pyenv/versions/3.6.9/envs/cogbot/lib/python3.6/site-packages/errbot/core_plugins/templates]
+2019-08-18 12:01:02,345 DEBUG    errbot.botplugin          Init storage for Help.
+2019-08-18 12:01:02,345 DEBUG    errbot.storage            Opening storage 'Help'
+2019-08-18 12:01:02,346 DEBUG    errbot.storage.shelf      Open shelf storage /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data/Help.db
+2019-08-18 12:01:02,346 DEBUG    errbot.core               Adding command : about -> about.
+2019-08-18 12:01:02,346 DEBUG    errbot.core               Adding command : apropos -> apropos.
+2019-08-18 12:01:02,346 DEBUG    errbot.core               Adding command : help -> help.
+2019-08-18 12:01:02,346 INFO     errbot.core_plugins.wsview Checking Help for webhooks
+2019-08-18 12:01:02,347 INFO     errbot.plugin_manager     Activate plugin: ChatRoom.
+2019-08-18 12:01:02,347 DEBUG    errbot.templating         Templates directory found for this plugin [/Users/craigsimon/.pyenv/versions/3.6.9/envs/cogbot/lib/python3.6/site-packages/errbot/core_plugins/templates]
+2019-08-18 12:01:02,347 DEBUG    errbot.botplugin          Init storage for ChatRoom.
+2019-08-18 12:01:02,347 DEBUG    errbot.storage            Opening storage 'ChatRoom'
+2019-08-18 12:01:02,347 DEBUG    errbot.storage.shelf      Open shelf storage /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data/ChatRoom.db
+2019-08-18 12:01:02,348 DEBUG    errbot.core               Adding command : room_create -> room_create.
+2019-08-18 12:01:02,348 DEBUG    errbot.core               Adding command : room_destroy -> room_destroy.
+2019-08-18 12:01:02,348 DEBUG    errbot.core               Adding command : room_invite -> room_invite.
+2019-08-18 12:01:02,348 DEBUG    errbot.core               Adding command : room_join -> room_join.
+2019-08-18 12:01:02,348 DEBUG    errbot.core               Adding command : room_leave -> room_leave.
+2019-08-18 12:01:02,348 DEBUG    errbot.core               Adding command : room_list -> room_list.
+2019-08-18 12:01:02,348 DEBUG    errbot.core               Adding command : room_occupants -> room_occupants.
+2019-08-18 12:01:02,348 DEBUG    errbot.core               Adding command : room_topic -> room_topic.
+2019-08-18 12:01:02,348 INFO     errbot.core_plugins.wsview Checking ChatRoom for webhooks
+2019-08-18 12:01:02,349 INFO     errbot.plugins.ChatRoom   Callback_connect
+2019-08-18 12:01:02,349 INFO     errbot.plugin_manager     Activate plugin: Utils.
+2019-08-18 12:01:02,349 DEBUG    errbot.templating         Templates directory found for this plugin [/Users/craigsimon/.pyenv/versions/3.6.9/envs/cogbot/lib/python3.6/site-packages/errbot/core_plugins/templates]
+2019-08-18 12:01:02,349 DEBUG    errbot.botplugin          Init storage for Utils.
+2019-08-18 12:01:02,349 DEBUG    errbot.storage            Opening storage 'Utils'
+2019-08-18 12:01:02,349 DEBUG    errbot.storage.shelf      Open shelf storage /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data/Utils.db
+2019-08-18 12:01:02,350 DEBUG    errbot.core               Adding command : echo -> echo.
+2019-08-18 12:01:02,350 DEBUG    errbot.core               Adding command : history -> history.
+2019-08-18 12:01:02,350 DEBUG    errbot.core               Adding command : log_tail -> log_tail.
+2019-08-18 12:01:02,350 DEBUG    errbot.core               Adding command : render_test -> render_test.
+2019-08-18 12:01:02,350 DEBUG    errbot.core               Adding command : whoami -> whoami.
+2019-08-18 12:01:02,350 INFO     errbot.core_plugins.wsview Checking Utils for webhooks
+2019-08-18 12:01:02,351 INFO     errbot.plugin_manager     Activate plugin: Example.
+2019-08-18 12:01:02,351 DEBUG    errbot.templating         No templates directory found for this plugin [Looking for /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/plugins/err-example/templates]
+2019-08-18 12:01:02,351 DEBUG    errbot.botplugin          Init storage for Example.
+2019-08-18 12:01:02,351 DEBUG    errbot.storage            Opening storage 'Example'
+2019-08-18 12:01:02,351 DEBUG    errbot.storage.shelf      Open shelf storage /Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data/Example.db
+2019-08-18 12:01:02,352 DEBUG    errbot.core               Adding command : tryme -> tryme.
+2019-08-18 12:01:02,352 INFO     errbot.core_plugins.wsview Checking Example for webhooks
+2019-08-18 12:01:02,352 DEBUG    errbot.plugin_manager     Activate flow plugins ...
+2019-08-18 12:01:02,352 INFO     errbot.core               
+2019-08-18 12:01:02,352 INFO     errbot.core               Notifying connection to all the plugins...
+2019-08-18 12:01:02,352 DEBUG    errbot.core               Trigger callback_connect on ACLS.
+2019-08-18 12:01:02,353 DEBUG    errbot.core               Trigger callback_connect on Flows.
+2019-08-18 12:01:02,353 DEBUG    errbot.core               Trigger callback_connect on CommandNotFoundFilter.
+2019-08-18 12:01:02,353 DEBUG    errbot.core               Trigger callback_connect on Health.
+2019-08-18 12:01:02,353 DEBUG    errbot.core               Trigger callback_connect on Backup.
+2019-08-18 12:01:02,353 DEBUG    errbot.core               Trigger callback_connect on VersionChecker.
+2019-08-18 12:01:02,353 DEBUG    errbot.core               Trigger callback_connect on Plugins.
+2019-08-18 12:01:02,353 DEBUG    errbot.core               Trigger callback_connect on Help.
+2019-08-18 12:01:02,353 DEBUG    errbot.core               Trigger callback_connect on ChatRoom.
+2019-08-18 12:01:02,353 INFO     errbot.plugins.ChatRoom   Callback_connect
+2019-08-18 12:01:02,353 DEBUG    errbot.core               Trigger callback_connect on Utils.
+2019-08-18 12:01:02,354 DEBUG    errbot.core               Trigger callback_connect on Example.
+2019-08-18 12:01:02,354 INFO     errbot.core               Plugin activation done.
+2019-08-18 12:01:02,354 DEBUG    errbot.core               Triggering callback_presence on ACLs.
+2019-08-18 12:01:02,354 DEBUG    errbot.core               Triggering callback_presence on Flows.
+2019-08-18 12:01:02,354 DEBUG    errbot.core               Triggering callback_presence on CommandNotFoundFilter.
+2019-08-18 12:01:02,354 DEBUG    errbot.core               Triggering callback_presence on Health.
+2019-08-18 12:01:02,354 DEBUG    errbot.core               Triggering callback_presence on Backup.
+2019-08-18 12:01:02,354 DEBUG    errbot.core               Triggering callback_presence on VersionChecker.
+2019-08-18 12:01:02,354 DEBUG    errbot.core               Triggering callback_presence on Plugins.
+2019-08-18 12:01:02,354 DEBUG    errbot.core               Triggering callback_presence on Help.
+2019-08-18 12:01:02,354 DEBUG    errbot.core               Triggering callback_presence on ChatRoom.
+2019-08-18 12:01:02,354 DEBUG    errbot.core               Triggering callback_presence on Utils.
+2019-08-18 12:01:02,355 DEBUG    errbot.core               Triggering callback_presence on Example.
+2019-08-18 12:04:27,760 DEBUG    errbot.backends.slack     No event handler available for user_change, ignoring this event
+2019-08-18 12:05:11,380 DEBUG    errbot.backends.slack     No event handler available for channel_joined, ignoring this event
+2019-08-18 12:05:11,529 DEBUG    errbot.backends.slack     Processing slack event: {'type': 'member_joined_channel', 'user': 'UMG3T890Q', 'channel': 'CMHV94VAT', 'channel_type': 'C', 'team': 'TM4L2MEAW', 'inviter': 'UMHV94PV5', 'event_ts': '1566155111.000900', 'ts': '1566155111.000900'}
+2019-08-18 12:05:11,529 DEBUG    errbot.core               Triggering callback_room_joined on ACLs.
+2019-08-18 12:05:11,529 DEBUG    errbot.core               Triggering callback_room_joined on Flows.
+2019-08-18 12:05:11,530 DEBUG    errbot.core               Triggering callback_room_joined on CommandNotFoundFilter.
+2019-08-18 12:05:11,530 DEBUG    errbot.core               Triggering callback_room_joined on Health.
+2019-08-18 12:05:11,530 DEBUG    errbot.core               Triggering callback_room_joined on Backup.
+2019-08-18 12:05:11,530 DEBUG    errbot.core               Triggering callback_room_joined on VersionChecker.
+2019-08-18 12:05:11,530 DEBUG    errbot.core               Triggering callback_room_joined on Plugins.
+2019-08-18 12:05:11,530 DEBUG    errbot.core               Triggering callback_room_joined on Help.
+2019-08-18 12:05:11,530 DEBUG    errbot.core               Triggering callback_room_joined on ChatRoom.
+2019-08-18 12:05:11,531 DEBUG    errbot.core               Triggering callback_room_joined on Utils.
+2019-08-18 12:05:11,531 DEBUG    errbot.core               Triggering callback_room_joined on Example.
+2019-08-18 12:05:11,531 DEBUG    errbot.backends.slack     Processing slack event: {'user': 'UMG3T890Q', 'type': 'message', 'subtype': 'channel_join', 'text': '<@UMG3T890Q> has joined the channel', 'team': 'TM4L2MEAW', 'inviter': 'UMHV94PV5', 'channel': 'CMHV94VAT', 'event_ts': '1566155111.001000', 'ts': '1566155111.001000'}
+2019-08-18 12:05:11,532 DEBUG    errbot.backends.slack     building an identifier from <@UMG3T890Q>.
+2019-08-18 12:05:11,534 DEBUG    urllib3.connectionpool    Starting new HTTPS connection (1): slack.com:443
+2019-08-18 12:05:11,887 DEBUG    urllib3.connectionpool    https://slack.com:443 "POST /api/im.open HTTP/1.1" 200 56
+2019-08-18 12:05:11,890 INFO     errbot.backends.slack     Tried to DM a bot.
+2019-08-18 12:05:11,890 DEBUG    errbot.backends.slack     Someone mentioned
+2019-08-18 12:05:11,891 DEBUG    errbot.backends.slack     Saw an event: {'channel': 'CMHV94VAT',
+ 'event_ts': '1566155111.001000',
+ 'inviter': 'UMHV94PV5',
+ 'subtype': 'channel_join',
+ 'team': 'TM4L2MEAW',
+ 'text': '<@UMG3T890Q> has joined the channel',
+ 'ts': '1566155111.001000',
+ 'type': 'message',
+ 'user': 'UMG3T890Q'}
+2019-08-18 12:05:11,891 DEBUG    errbot.backends.slack     Escaped IDs event text: @cogbot has joined the channel
+2019-08-18 12:05:11,891 DEBUG    errbot.core               Ignoring message from self.
+2019-08-18 12:05:11,891 DEBUG    errbot.core               @cogbot has/have been mentioned
+2019-08-18 12:05:11,891 DEBUG    errbot.core               Triggering callback_mention on ACLs.
+2019-08-18 12:05:11,891 DEBUG    errbot.core               Triggering callback_mention on Flows.
+2019-08-18 12:05:11,892 DEBUG    errbot.core               Triggering callback_mention on CommandNotFoundFilter.
+2019-08-18 12:05:11,892 DEBUG    errbot.core               Triggering callback_mention on Health.
+2019-08-18 12:05:11,892 DEBUG    errbot.core               Triggering callback_mention on Backup.
+2019-08-18 12:05:11,892 DEBUG    errbot.core               Triggering callback_mention on VersionChecker.
+2019-08-18 12:05:11,892 DEBUG    errbot.core               Triggering callback_mention on Plugins.
+2019-08-18 12:05:11,892 DEBUG    errbot.core               Triggering callback_mention on Help.
+2019-08-18 12:05:11,892 DEBUG    errbot.core               Triggering callback_mention on ChatRoom.
+2019-08-18 12:05:11,892 DEBUG    errbot.core               Triggering callback_mention on Utils.
+2019-08-18 12:05:11,892 DEBUG    errbot.core               Triggering callback_mention on Example.
+2019-08-18 12:05:11,914 DEBUG    errbot.backends.slack     No event handler available for pref_change, ignoring this event
+2019-08-18 12:05:11,966 DEBUG    errbot.backends.slack     No event handler available for desktop_notification, ignoring this event
+2019-08-18 12:05:22,336 DEBUG    errbot.backends.slack     No event handler available for user_typing, ignoring this event
+2019-08-18 12:05:26,220 DEBUG    errbot.backends.slack     Processing slack event: {'client_msg_id': 'f7d7343b-4d2a-4866-8df8-f8236a38fe1f', 'suppress_notification': False, 'type': 'message', 'text': '!cogbot help', 'user': 'UMHV94PV5', 'team': 'TM4L2MEAW', 'user_team': 'TM4L2MEAW', 'source_team': 'TM4L2MEAW', 'channel': 'CMHV94VAT', 'event_ts': '1566155126.001200', 'ts': '1566155126.001200'}
+2019-08-18 12:05:26,221 DEBUG    errbot.backends.slack     Saw an event: {'channel': 'CMHV94VAT',
+ 'client_msg_id': 'f7d7343b-4d2a-4866-8df8-f8236a38fe1f',
+ 'event_ts': '1566155126.001200',
+ 'source_team': 'TM4L2MEAW',
+ 'suppress_notification': False,
+ 'team': 'TM4L2MEAW',
+ 'text': '!cogbot help',
+ 'ts': '1566155126.001200',
+ 'type': 'message',
+ 'user': 'UMHV94PV5',
+ 'user_team': 'TM4L2MEAW'}
+2019-08-18 12:05:26,221 DEBUG    errbot.backends.slack     Escaped IDs event text: !cogbot help
+2019-08-18 12:05:26,221 DEBUG    errbot.core               *** frm = #chatsecops/craig
+2019-08-18 12:05:26,222 DEBUG    errbot.core               *** username = @craig
+2019-08-18 12:05:26,223 DEBUG    errbot.core               *** text = !cogbot help
+2019-08-18 12:05:26,223 DEBUG    errbot.core               Command not found
+2019-08-18 12:05:26,224 DEBUG    errbot.backends.slack     Sending channel message to chatsecops (CMHV94VAT).
+2019-08-18 12:05:26,224 DEBUG    errbot.backends.slack     Message size: 43.
+2019-08-18 12:05:26,226 DEBUG    urllib3.connectionpool    Starting new HTTPS connection (1): slack.com:443
+2019-08-18 12:05:26,453 DEBUG    urllib3.connectionpool    https://slack.com:443 "POST /api/chat.postMessage HTTP/1.1" 200 187
+2019-08-18 12:05:26,456 DEBUG    errbot.core               Triggering callback_message on ACLs.
+2019-08-18 12:05:26,456 DEBUG    errbot.core               Triggering callback_message on Flows.
+2019-08-18 12:05:26,456 DEBUG    errbot.core               Triggering callback_message on CommandNotFoundFilter.
+2019-08-18 12:05:26,456 DEBUG    errbot.core               Triggering callback_message on Health.
+2019-08-18 12:05:26,456 DEBUG    errbot.core               Triggering callback_message on Backup.
+2019-08-18 12:05:26,456 DEBUG    errbot.core               Triggering callback_message on VersionChecker.
+2019-08-18 12:05:26,457 DEBUG    errbot.core               Triggering callback_message on Plugins.
+2019-08-18 12:05:26,457 DEBUG    errbot.core               Triggering callback_message on Help.
+2019-08-18 12:05:26,457 DEBUG    errbot.core               Triggering callback_message on ChatRoom.
+2019-08-18 12:05:26,457 DEBUG    errbot.core               Triggering callback_message on Utils.
+2019-08-18 12:05:26,457 DEBUG    errbot.core               Triggering callback_message on Example.
+2019-08-18 12:05:26,459 DEBUG    errbot.backends.slack     Processing slack event: {'bot_id': 'BMG3ZCNG5', 'suppress_notification': False, 'type': 'message', 'text': 'Command "cogbot" / "cogbot help" not found.', 'user': 'UMG3T890Q', 'team': 'TM4L2MEAW', 'user_team': 'TM4L2MEAW', 'source_team': 'TM4L2MEAW', 'channel': 'CMHV94VAT', 'event_ts': '1566155126.001300', 'ts': '1566155126.001300'}
+2019-08-18 12:05:26,460 DEBUG    errbot.backends.slack     Saw an event: {'bot_id': 'BMG3ZCNG5',
+ 'channel': 'CMHV94VAT',
+ 'event_ts': '1566155126.001300',
+ 'source_team': 'TM4L2MEAW',
+ 'suppress_notification': False,
+ 'team': 'TM4L2MEAW',
+ 'text': 'Command "cogbot" / "cogbot help" not found.',
+ 'ts': '1566155126.001300',
+ 'type': 'message',
+ 'user': 'UMG3T890Q',
+ 'user_team': 'TM4L2MEAW'}
+2019-08-18 12:05:26,460 DEBUG    errbot.backends.slack     Escaped IDs event text: Command "cogbot" / "cogbot help" not found.
+2019-08-18 12:05:26,460 DEBUG    errbot.core               Ignoring message from self.
+2019-08-18 12:05:42,526 DEBUG    errbot.backends.slack     No event handler available for user_typing, ignoring this event
+2019-08-18 12:05:45,283 DEBUG    errbot.backends.slack     Processing slack event: {'client_msg_id': 'b51bdac9-9812-4f24-94ef-8b5e00fd4b29', 'suppress_notification': False, 'type': 'message', 'text': '<@UMG3T890Q> help', 'user': 'UMHV94PV5', 'team': 'TM4L2MEAW', 'user_team': 'TM4L2MEAW', 'source_team': 'TM4L2MEAW', 'channel': 'CMHV94VAT', 'event_ts': '1566155145.001500', 'ts': '1566155145.001500'}
+2019-08-18 12:05:45,283 DEBUG    errbot.backends.slack     building an identifier from <@UMG3T890Q>.
+2019-08-18 12:05:45,284 DEBUG    errbot.backends.slack     Someone mentioned
+2019-08-18 12:05:45,284 DEBUG    errbot.backends.slack     Saw an event: {'channel': 'CMHV94VAT',
+ 'client_msg_id': 'b51bdac9-9812-4f24-94ef-8b5e00fd4b29',
+ 'event_ts': '1566155145.001500',
+ 'source_team': 'TM4L2MEAW',
+ 'suppress_notification': False,
+ 'team': 'TM4L2MEAW',
+ 'text': '<@UMG3T890Q> help',
+ 'ts': '1566155145.001500',
+ 'type': 'message',
+ 'user': 'UMHV94PV5',
+ 'user_team': 'TM4L2MEAW'}
+2019-08-18 12:05:45,284 DEBUG    errbot.backends.slack     Escaped IDs event text: @cogbot help
+2019-08-18 12:05:45,285 DEBUG    errbot.core               *** frm = #chatsecops/craig
+2019-08-18 12:05:45,285 DEBUG    errbot.core               *** username = @craig
+2019-08-18 12:05:45,285 DEBUG    errbot.core               *** text = @cogbot help
+2019-08-18 12:05:45,285 DEBUG    errbot.core               Triggering callback_message on ACLs.
+2019-08-18 12:05:45,285 DEBUG    errbot.core               Triggering callback_message on Flows.
+2019-08-18 12:05:45,286 DEBUG    errbot.core               Triggering callback_message on CommandNotFoundFilter.
+2019-08-18 12:05:45,286 DEBUG    errbot.core               Triggering callback_message on Health.
+2019-08-18 12:05:45,286 DEBUG    errbot.core               Triggering callback_message on Backup.
+2019-08-18 12:05:45,286 DEBUG    errbot.core               Triggering callback_message on VersionChecker.
+2019-08-18 12:05:45,286 DEBUG    errbot.core               Triggering callback_message on Plugins.
+2019-08-18 12:05:45,286 DEBUG    errbot.core               Triggering callback_message on Help.
+2019-08-18 12:05:45,286 DEBUG    errbot.core               Triggering callback_message on ChatRoom.
+2019-08-18 12:05:45,287 DEBUG    errbot.core               Triggering callback_message on Utils.
+2019-08-18 12:05:45,287 DEBUG    errbot.core               Triggering callback_message on Example.
+2019-08-18 12:05:45,287 DEBUG    errbot.core               @cogbot has/have been mentioned
+2019-08-18 12:05:45,287 DEBUG    errbot.core               Triggering callback_mention on ACLs.
+2019-08-18 12:05:45,287 DEBUG    errbot.core               Triggering callback_mention on Flows.
+2019-08-18 12:05:45,287 DEBUG    errbot.core               Triggering callback_mention on CommandNotFoundFilter.
+2019-08-18 12:05:45,287 DEBUG    errbot.core               Triggering callback_mention on Health.
+2019-08-18 12:05:45,287 DEBUG    errbot.core               Triggering callback_mention on Backup.
+2019-08-18 12:05:45,288 DEBUG    errbot.core               Triggering callback_mention on VersionChecker.
+2019-08-18 12:05:45,288 DEBUG    errbot.core               Triggering callback_mention on Plugins.
+2019-08-18 12:05:45,288 DEBUG    errbot.core               Triggering callback_mention on Help.
+2019-08-18 12:05:45,288 DEBUG    errbot.core               Triggering callback_mention on ChatRoom.
+2019-08-18 12:05:45,288 DEBUG    errbot.core               Triggering callback_mention on Utils.
+2019-08-18 12:05:45,288 DEBUG    errbot.core               Triggering callback_mention on Example.
+2019-08-18 12:05:45,699 DEBUG    errbot.backends.slack     No event handler available for desktop_notification, ignoring this event
+2019-08-18 12:06:20,004 INFO     errbot.backends.slack     Interrupt received, shutting down..
+2019-08-18 12:06:20,004 DEBUG    errbot.backends.slack     Triggering disconnect callback
+2019-08-18 12:06:20,005 INFO     errbot.core               Disconnect callback, deactivating all the plugins.
+2019-08-18 12:06:20,005 DEBUG    errbot.storage            Closed storage 'ACLs'
+2019-08-18 12:06:20,006 DEBUG    errbot.core               Removing command filter: acls
+2019-08-18 12:06:20,006 DEBUG    errbot.storage            Closed storage 'Flows'
+2019-08-18 12:06:20,007 DEBUG    errbot.storage            Closed storage 'CommandNotFoundFilter'
+2019-08-18 12:06:20,008 DEBUG    errbot.core               Removing command filter: cnf_filter
+2019-08-18 12:06:20,008 DEBUG    errbot.storage            Closed storage 'Health'
+2019-08-18 12:06:20,009 DEBUG    errbot.storage            Closed storage 'Backup'
+2019-08-18 12:06:20,009 DEBUG    errbot.botplugin          You still have active pollers at deactivation stage, I cleaned them up for you.
+2019-08-18 12:06:20,010 DEBUG    errbot.storage            Closed storage 'VersionChecker'
+2019-08-18 12:06:20,010 DEBUG    errbot.storage            Closed storage 'Plugins'
+2019-08-18 12:06:20,011 DEBUG    errbot.storage            Closed storage 'Help'
+2019-08-18 12:06:20,012 DEBUG    errbot.storage            Closed storage 'ChatRoom'
+2019-08-18 12:06:20,012 DEBUG    errbot.storage            Closed storage 'Utils'
+2019-08-18 12:06:20,013 DEBUG    errbot.storage            Closed storage 'Example'
+2019-08-18 12:06:20,013 INFO     errbot.backends.base      Trigger shutdown
+2019-08-18 12:06:20,013 DEBUG    errbot.storage            Closed storage 'slack_backend'
+2019-08-18 12:06:20,014 INFO     errbot.plugin_manager     Shutdown.
+2019-08-18 12:06:20,014 DEBUG    errbot.storage            Closed storage 'core'
+2019-08-18 12:06:20,014 INFO     errbot.plugin_manager     Bye.
+2019-08-18 12:06:20,014 DEBUG    errbot.storage            Closed storage 'repomgr'
+2019-08-18 12:06:20,014 INFO     errbot.cli                Process exiting
