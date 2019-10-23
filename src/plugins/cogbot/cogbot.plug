@@ -1,0 +1,13 @@
+[Core]
+name = cogbot
+module = cogbot
+
+[Documentation]
+description = Cogbot integrates Cognito Detect and Slack
+
+[Python]
+version = 3
+
+[Errbot]
+min = 6.1.1
+

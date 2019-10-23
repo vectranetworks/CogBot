@@ -1,0 +1,56 @@
+        vectra_authentication = (cognito_username, cognito_password)
+        vectra_brain_url = cognito_url
+        headers = {"Content-Type": "application/json"}
+        
+        try:
+            response = requests.get(
+            url=vectra_brain_url + "/api/system/info",
+            auth=vectra_authentication,
+            headers=headers,
+            verify=False,
+            )
+
+            self.log.debug(response.json())
+
+            if response.status_code == 200:
+                return "PONG! Connection to brain {0} is successful! - status code {1}".format(
+                    vectra_brain_url, response.status_code
+                )
+
+            else:
+                return "PING FAILED! to brain {0} - status code {1}".format(
+                    vectra_brain_url, response.status_code
+                )
+        # except TimeoutError as e:
+        #     return "PING FAILED! {0}".format(type(e)
+    # @botcmd(split_args_with=None)
+    # def hoststatus(self, message, args):
+    #     """The ping command will check CogBots connetion with the brain"""
+
+    #     yield "Querrying the Cognito Detect Brain"
+    #     vectra_authentication = (cognito_username, cognito_password)
+    #     vectra_brain_url = cognito_url
+    #     headers = {"Content-Type": "application/json?page_size=all"}
+    #     response = requests.get(
+    #         url=vectra_brain_url + "/api/hosts/",
+    #         auth=vectra_authentication,
+    #         headers=headers,
+    #         verify=False,
+    #     )
+
+    #     self.log.debug(response.json())
+    #     total_hosts = response.json()["count"]
+
+    #     for host in range(len(response.json()["results"])):
+    #         if response.json()["results"][host]["state"] == "active":
+    #             self.log.debug("Active host")
+
+    #         else:
+    #             self.log.debug("not active host")
+
+    #     yield "Done"
+    #     # for host in response.json()["results"]:
+    #     #     if response.json()["results"][host]["state"] == "active":
+    #     #         yield "Host id has active detections"
+
+    #     yield "The total number of hosts is {}".format(total_hosts)

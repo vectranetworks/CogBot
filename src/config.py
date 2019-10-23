@@ -8,22 +8,27 @@ import logging
 BACKEND = (
     "Slack"
 )  # Errbot will start in text mode (console only mode) and will answer commands from there.
+BOT_IDENTITY = {"token": "xoxb-266216378434-783351198945-vj2OvFmVFeibdGueXMWQ9k8y"}
 
-BOT_DATA_DIR = r"/Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/data"
+BOT_ADMINS = ("@craig",)
+BOT_ALT_PREFIXES = "@cogbot"
+CORE_PLUGINS = (
+    "ACLs",
+    "Flows",
+    "CommandNotFoundFilter",
+    "Health",
+    "Help",
+    "TextCmds",
+    "Plugins",
+    "Logger",
+)
+
+
+BOT_DATA_DIR = r"/Users/craig/Source Code/vectra.ai/Python/cogbot/cogbot/src/data"
 BOT_EXTRA_PLUGIN_DIR = (
-    r"/Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/plugins"
+    r"/Users/craig/Source Code/vectra.ai/Python/cogbot/cogbot/src/plugins"
 )
 
-BOT_LOG_FILE = (
-    r"/Users/craigsimon/Source Code/vectra.ai/Python/cogbot/cogbot/src/errbot.log"
-)
+BOT_LOG_FILE = r"/Users/craig/Source Code/vectra.ai/Python/cogbot/cogbot/src/errbot.log"
 BOT_LOG_LEVEL = logging.DEBUG
-
-BOT_ADMINS = (
-    "@craig",
-    "twade",
-    "jbarrett",
-)  # !! Don't leave that to "@CHANGE_ME" if you connect your errbot to a chat system !!
-
-BOT_IDENTITY = {"token": "xoxb-718682728370-730129281024-Uz67OCbayLhPnmf11bOqy9Ke"}
 
