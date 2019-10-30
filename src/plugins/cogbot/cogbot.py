@@ -2,10 +2,12 @@ from errbot import BotPlugin, botcmd, arg_botcmd, webhook
 
 import requests
 import urllib3
+import time
 
 import os
 import logging
 import json
+
 
 logger = logging.getLogger("CogBot")
 logger.setLevel(logging.DEBUG)
@@ -70,7 +72,39 @@ class Cogbot(BotPlugin):
 
         You should delete it if you're not using it to override any default behaviour
         """
-        pass
+
+        self.log.debug(
+            "Querying the Cognito Detect brain for the number of hosts in the critical quadrant."
+        )
+        vectra_authentication = (cognito_username, cognito_password)
+        vectra_brain_url = cognito_url
+        headers = {"Content-Type": "application/json?page_size=all"}
+        response = requests.get(
+            url=vectra_brain_url + "/api/hosts/",
+            auth=vectra_authentication,
+            headers=headers,
+            verify=False,
+        )
+
+        # Calculate number of hosts with active detections
+        global last_poll_critical_hosts
+        last_poll_critical_hosts = 0
+
+        for host in range(len(response.json()["results"])):
+            if response.json()["results"][host]["state"] == "active":
+
+                current_host_category = self._score_host_(
+                    response.json()["results"][host]["t_score"],
+                    response.json()["results"][host]["c_score"],
+                )
+
+                if current_host_category == "critical":
+                    last_poll_critical_hosts = last_poll_critical_hosts + 1
+                    self.log.debug(
+                        "On startup CogBot found {} hosts in the critical quadrant".format(
+                            last_poll_critical_hosts
+                        )
+                    )
 
     def callback_message(self, message):
         """
@@ -123,6 +157,14 @@ class Cogbot(BotPlugin):
         return "Completed Test"
 
     @botcmd(split_args_with=None)
+    def lastpoll(self, message, args):
+        """ Test is just that, my first method on this class.  This is just a test
+        """
+        yield (last_poll_critical_hosts)
+
+        return "Completed Test"
+
+    @botcmd(split_args_with=None)
     def ping(self, message, args):
         """The ping command will check CogBots connetion with the brain"""
 
@@ -147,7 +189,7 @@ class Cogbot(BotPlugin):
             return "PING FAILED!!"
 
     @botcmd(split_args_with=None)
-    def hoststatus(self, message, args):
+    def host_status(self, message, args):
         """The ping command will check CogBots connetion with the brain"""
 
         yield "Querrying the Cognito Detect Brain"
@@ -210,6 +252,111 @@ class Cogbot(BotPlugin):
         yield "{} hosts are scored as high".format(high_hosts)
         yield "{} hosts are scored as critical".format(critical_hosts)
 
+    @arg_botcmd("--hostid", dest="hostid", type=str)
+    def host_isolate(self, message, hostid):
+        """isolate --hostid <hostid> will isolate the specified hostid"""
+
+        yield "Querrying the Cognito Detect Brain"
+        vectra_authentication = (cognito_username, cognito_password)
+        vectra_brain_url = cognito_url
+        headers = {"Content-Type": "application/json?page_size=all"}
+        response = requests.get(
+            url=vectra_brain_url + "/api/hosts/{}".format(hostid),
+            auth=vectra_authentication,
+            headers=headers,
+            verify=False,
+        )
+
+        self.log.debug(response.json())
+        host_ip_address = response.json()["last_source"]
+        yield "isolating host hostid {} ip_address {}".format(hostid, host_ip_address)
+        yield "communicating with CrowdStrike API"
+        self._isolate_with_crowdstrike(message, hostid)
+
+        yield "Completed"
+
+    @arg_botcmd("--hostid", dest="hostid", type=str)
+    def host_unisolate(self, message, hostid):
+        """unisolate --hostid <hostid> will unisolate the specified hostid"""
+
+        yield "Querrying the Cognito Detect Brain"
+        vectra_authentication = (cognito_username, cognito_password)
+        vectra_brain_url = cognito_url
+        headers = {"Content-Type": "application/json?page_size=all"}
+        response = requests.get(
+            url=vectra_brain_url + "/api/hosts/{}".format(hostid),
+            auth=vectra_authentication,
+            headers=headers,
+            verify=False,
+        )
+
+        self.log.debug(response.json())
+        host_ip_address = response.json()["last_source"]
+        yield "unisolating host hostid {} ip_address {}".format(hostid, host_ip_address)
+        yield "communicating with CrowdStrike API"
+        self._isolate_with_crowdstrike(message, hostid)
+
+        yield "Completed"
+
+    @arg_botcmd("--interval", dest="interval", type=int)
+    def scan_critical_hosts(self, message, interval):
+        """start scan will start reporting
+        """
+        self.start_poller(interval, self.count_critical_hosts, times=3)
+
+    @botcmd()
+    def stop_scan(self, message, interval):
+        """start scan will start reporting
+        """
+        self.stop_poller(None)
+
+    def count_critical_hosts(self):
+        global last_poll_critical_hosts
+        self.log.debug("count_critical_hosts() Called!")
+
+        vectra_authentication = (cognito_username, cognito_password)
+        vectra_brain_url = cognito_url
+        headers = {"Content-Type": "application/json?page_size=all"}
+        response = requests.get(
+            url=vectra_brain_url + "/api/hosts/",
+            auth=vectra_authentication,
+            headers=headers,
+            verify=False,
+        )
+        # Now let's see how many critical hosts exist now
+        critical_hosts = 0
+
+        for host in range(len(response.json()["results"])):
+            if response.json()["results"][host]["state"] == "active":
+
+                current_host_category = self._score_host_(
+                    response.json()["results"][host]["t_score"],
+                    response.json()["results"][host]["c_score"],
+                )
+
+                if current_host_category == "critical":
+                    critical_hosts = critical_hosts + 1
+        self.log.debug(
+            "last critical hosts = {} this querry critical hosts={}".format(
+                last_poll_critical_hosts, critical_hosts
+            )
+        )
+        if last_poll_critical_hosts == critical_hosts:
+            self.send(
+                self.build_identifier("#chatsecops"),
+                "No change in number of hosts in the critical quanrant.",
+            )
+            last_poll_critical_hosts = critical_hosts
+
+        if last_poll_critical_hosts < critical_hosts:
+            self.send(
+                self.build_identifier("#chatsecops"),
+                "ALERT - In increase of {} hosts in the critical quandrant has occured!".format(
+                    critical_hosts - last_poll_critical_hosts
+                ),
+            )
+            last_poll_critical_hosts = critical_hosts
+
     def _score_host_(self, threat, certainty):
         """score_host will return a string to describe the current hosts scoring"""
 
@@ -231,3 +378,8 @@ class Cogbot(BotPlugin):
 
         else:
             self.log.debug("This shouldn't happen!")
+
+    def _isolate_with_crowdstrike(self, message, hostid):
+
+        time.sleep(5)
+        yield "Isolation with CrowdStrike completed successfully!"
