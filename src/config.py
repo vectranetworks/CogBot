@@ -26,11 +26,9 @@ CORE_PLUGINS = (
 )
 
 
-BOT_DATA_DIR = r"/Users/craig/Source Code/vectra.ai/Python/cogbot/cogbot/src/data"
-BOT_EXTRA_PLUGIN_DIR = (
-    r"/Users/craig/Source Code/vectra.ai/Python/cogbot/cogbot/src/plugins"
-)
+BOT_DATA_DIR = r"./data"
+BOT_EXTRA_PLUGIN_DIR = r"./plugins"
 
-BOT_LOG_FILE = r"/Users/craig/Source Code/vectra.ai/Python/cogbot/cogbot/src/errbot.log"
+BOT_LOG_FILE = r"./errbot.log"
 BOT_LOG_LEVEL = logging.DEBUG
 
